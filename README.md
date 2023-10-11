@@ -1,7 +1,7 @@
 # Making Large Language Models Perform Better in Knowledge Graph Completion
 ![](https://img.shields.io/badge/version-1.0.1-blue)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/zjukg/KoPA/main/LICENSE)
-[![AAAI](https://img.shields.io/badge/NLPCC'23-brightgreen)](http://tcci.ccf.org.cn/conference/2023/)
+[![AAAI](https://img.shields.io/badge/Preprint'23-brightgreen)](https://arxiv.org/abs/2310.06671)
 [![Pytorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?e&logo=PyTorch&logoColor=white)](https://pytorch.org/)
  - [Making Large Language Models Perform Better in Knowledge Graph Completion
 ](https://arxiv.org/abs/2310.06671)
