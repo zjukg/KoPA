@@ -47,5 +47,12 @@ Please condiser citing this paper if you use the code from our work.
 Thanks a lot :)
 
 ```bigquery
-TBD
+@misc{zhang2023making,
+      title={Making Large Language Models Perform Better in Knowledge Graph Completion}, 
+      author={Yichi Zhang and Zhuo Chen and Wen Zhang and Huajun Chen},
+      year={2023},
+      eprint={2310.06671},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
