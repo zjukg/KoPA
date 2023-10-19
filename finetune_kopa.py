@@ -179,9 +179,9 @@ def train(
     slama_model = KoPAWithAdapter(model, num_prefix, kge_model=kge_model)
 
     if data_path.endswith(".json") or data_path.endswith(".jsonl"):
-        data = load_dataset("json", data_files=data_path, cache_dir="/data/zhangyichi/.huggingface/")
+        data = load_dataset("json")
     else:
-        data = load_dataset(data_path, cache_dir="/data/zhangyichi/.huggingface/")
+        data = load_dataset(data_path)
 
     if resume_from_checkpoint:
         # Check the available weights and load them
