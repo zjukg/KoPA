@@ -13,7 +13,13 @@
 
 
 ## 🔬 Dependencies
-Our code is developed based on [alpaca-lora](https://github.com/tloen/alpaca-lora). Please build the Python environment following the instruction in Alpaca-lora.
+Our code is developed based on [alpaca-lora](https://github.com/tloen/alpaca-lora). Please build the Python following the instruction in Alpaca-lora.
+
+Some core python library config: 
+- Python 3.9.16
+- torch 2.0.0
+- transformers 4.28.0
+- peft 0.3.0
 
 ## 📕 Training & Test
 
@@ -26,7 +32,7 @@ CUDA_VISIBLE_DEVICES=0 nohup python finetune_kopa.py \
     --data_path 'data/UMLS-train.json' \
     --output_dir 'YOUR SAVE PATH' \
     --num_epochs 3 \
-    --lora_r 32 \
+    --lora_r 64 \
     --learning_rate 3e-4 \
     --batch_size 12 \
     --micro_batch_size 12 \
@@ -47,5 +53,12 @@ Please condiser citing this paper if you use the code from our work.
 Thanks a lot :)
 
 ```bigquery
-TBD
+@misc{zhang2023making,
+      title={Making Large Language Models Perform Better in Knowledge Graph Completion}, 
+      author={Yichi Zhang and Zhuo Chen and Wen Zhang and Huajun Chen},
+      year={2023},
+      eprint={2310.06671},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
