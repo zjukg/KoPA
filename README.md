@@ -22,6 +22,7 @@ Some core python library config:
 - peft 0.3.0
 
 ## 📕 Training & Test
+- Note: The current dataset is just a little demonstration to help you run the full pipeline. We will release the full datasets in the future.
 
 - run KoPA tuning
 ```shell
