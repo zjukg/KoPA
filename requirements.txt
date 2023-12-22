@@ -6,7 +6,7 @@ black
 black[jupyter]
 datasets
 fire
-git+https://github.com/huggingface/peft.git
+git+https://github.com/huggingface/peft@smangrul/release-v0.3.0
 transformers>=4.28.0
 sentencepiece
 gradio
