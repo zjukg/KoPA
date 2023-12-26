@@ -19,7 +19,10 @@ Some core python library config:
 - Python 3.9.16
 - torch 2.0.0
 - transformers 4.28.0
-- peft 0.3.0
+
+## 🌲 Data Preparation
+Due to the size of the data, you need to download and unzip the data file data.zip from [this link](https://drive.google.com/file/d/1J1Ioi23jTMaBkBDYzfIy2MAZYMUIjFWW/view?usp=drive_link) and put them in the data/.
+
 
 ## 📕 Training & Test
 - Note: The current dataset is just a little demonstration to help you run the full pipeline. We will release the full datasets in the future.
@@ -28,9 +31,10 @@ Some core python library config:
 ```shell
 export WANDB_DISABLED=true
 wandb offline
+# For CoDeX-S dataset
 CUDA_VISIBLE_DEVICES=0 nohup python finetune_kopa.py \
     --base_model 'YOUR LLM PATH' \
-    --data_path 'data/UMLS-train.json' \
+    --data_path 'data/CoDeX-S-train.json' \
     --output_dir 'YOUR SAVE PATH' \
     --num_epochs 3 \
     --lora_r 64 \
@@ -38,10 +42,27 @@ CUDA_VISIBLE_DEVICES=0 nohup python finetune_kopa.py \
     --batch_size 12 \
     --micro_batch_size 12 \
     --num_prefix 1 \
-    --kge_model 'data/UMLS-rotate.pth' \
+    --kge_model 'data/CoDeX-S-rotate.pth' \
+    --lora_target_modules='[q_proj,k_proj,v_proj,o_proj]' > log.txt &
+
+
+# For CoDeX-S dataset
+export WANDB_DISABLED=true
+wandb offline
+CUDA_VISIBLE_DEVICES=0 nohup python finetune_kopa.py \
+    --base_model 'YOUR LLM PATH' \
+    --data_path 'data/CoDeX-S-train.json' \
+    --output_dir 'YOUR SAVE PATH' \
+    --num_epochs 3 \
+    --lora_r 64 \
+    --learning_rate 3e-4 \
+    --batch_size 12 \
+    --micro_batch_size 12 \
+    --num_prefix 1 \
+    --kge_model 'data/CoDeX-S-rotate.pth' \
     --lora_target_modules='[q_proj,k_proj,v_proj,o_proj]' > log.txt &
 ```
-You may need to fill the LLM path and save path before running.
+You may need to fill the LLM path and save path before running. The hyper-parameters can be tuned by yourself.
 
 - run inference
 ```shell
