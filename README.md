@@ -19,6 +19,9 @@ Some core python library config:
 - Python 3.9.16
 - torch 2.0.0
 - transformers 4.28.0
+- **peft 0.3.0**
+
+- If you find the performance of fine-tuned model is close to the zero-shot results. You can check whether your LoRA checkpoint is empty. A version mismatch of the peft / transformers library may cause such an issue. See more details in this issue from the perf reposity [https://github.com/huggingface/peft/issues/286](https://github.com/huggingface/peft/issues/286).
 
 ## 🌲 Data Preparation
 Due to the size of the data, you need to download and unzip the data file data.zip from [this link](https://drive.google.com/file/d/1J1Ioi23jTMaBkBDYzfIy2MAZYMUIjFWW/view?usp=drive_link) and put them in the data/.
@@ -76,12 +79,15 @@ Please condiser citing this paper if you use the code from our work.
 Thanks a lot :)
 
 ```bigquery
-@misc{zhang2023making,
-      title={Making Large Language Models Perform Better in Knowledge Graph Completion}, 
-      author={Yichi Zhang and Zhuo Chen and Wen Zhang and Huajun Chen},
-      year={2023},
-      eprint={2310.06671},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@article{DBLP:journals/corr/abs-2310-06671,
+  author       = {Yichi Zhang and
+                  Zhuo Chen and
+                  Wen Zhang and
+                  Huajun Chen},
+  title        = {Making Large Language Models Perform Better in Knowledge Graph Completion},
+  journal      = {CoRR},
+  volume       = {abs/2310.06671},
+  year         = {2023}
+}
 }
 ```
